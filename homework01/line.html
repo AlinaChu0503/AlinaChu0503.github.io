@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINE 介紹</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .item-group{
+            width: 960px;
+            margin: auto;
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            padding: 100px 0;
+        }
+        .item:nth-child(odd){
+            flex-direction: row-reverse;
+        }
+
+
+        .pic{
+            width: 800px;
+            height: auto;
+        } 
+        .pic img{ 
+            width: 120%;  
+            vertical-align: middle;
+        }
+
+
+        .text{
+            width: 480px;
+            padding: 50px;
+        }
+
+        .text .imgIcon{
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            box-sizing: border-box;
+            border: .5px solid rgba(0,0,0,.1);
+        }
+
+        .text h4{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 39px;
+            margin-bottom: 15px;
+            color: #1e1e1e;
+        }
+        .text h5{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #07B53B;
+        }
+
+        .text .description{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin-bottom: 28px;
+            color: #777;
+        }
+
+        .text .siteLink{
+            display: flex;
+            align-items: center;
+            width: 161PX;
+            height: 60px;
+            border-radius: 4px;
+            border: 1px solid rgba(0,0,0,.15);
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+
+        .text .siteLink .siteIcon img{
+            width: 15px;
+            padding: 10px 5px 10px 13px;
+        }
+
+        .text .siteLink .siteIconText{
+            width: auto;
+            padding: 10px 5px 10px 5px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <div class="item-group">
+        <div class="item">
+            <div class="pic">
+                <img src = "image/image1.png">
+            </div>
+            <div class="text">
+                <img class="imgIcon" src="image/icon1.png">
+                <h4>LINE TODAY</h4>
+                <h5>隨點隨看 生活快充</h5>
+                <div class="description">
+                    和朋友一起追劇，不錯過最新、最熱門、最潮的話題大劇，即時分享娛樂影音，展開精彩生活故事，LINE TV是您的追劇第一選擇！
+                </div>
+                <a class="siteLink" href="#" style="color: #1e1e1e; text-decoration: none;">
+                    <div class=siteIcon>
+                        <img src="image/linkIcon.png">
+                    </div>
+                    <div class="siteIconText">其他詳細資訊</div>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src = "image/image2.png">
+            </div>
+            <div class="text">
+                <img class="imgIcon" src="image/icon2.png">
+                <h4 class="title1">LINE貼文串</h4>
+                <h5 class="title2">探索樂趣，分享生活</h5>
+                <div class="description">
+                    在貼文串追蹤你的最愛．有感內容不錯過。 打造你的個人閱知頻道，探索生活大小事。 分享所見所聞，串連人際、啟發創意的無限可能！
+                </div>
+                <a class="siteLink" href="#" style="color: #1e1e1e; text-decoration: none;">
+                    <div class=siteIcon>
+                        <img src="image/linkIcon.png">
+                    </div>
+                    <div class="siteIconText">其他詳細資訊</div>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src = "image/image3.png">
+            </div>
+            <div class="text">
+                <img class="imgIcon" src="image/icon3.png">
+                <h4 class="title1">LINE Pay</h4>
+                <h5 class="title2">付款、轉帳、生活繳費，輕鬆簡單又便利！</h5>
+                <div class="description">
+                    付款簡單又便利，還能輕鬆轉帳給LINE好友，動動手指輕鬆完成日常生活各種帳單繳費， 免出門省時又省力。
+                </div>
+                <a class="siteLink" href="#" style="color: #1e1e1e; text-decoration: none;">
+                    <div class=siteIcon>
+                        <img src="image/linkIcon.png">
+                    </div>
+                    <div class="siteIconText">其他詳細資訊</div>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src = "image/image4.png">
+            </div>
+            <div class="text">
+                <img class="imgIcon" src="image/icon4.png">
+                <h4 class="title1">LINE購物</h4>
+                <h5 class="title2">先LINE購物再購物</h5>
+                <div class="description">
+                    涵蓋各大購物、拍賣、精品、通路、旅遊、及票券商店，輕鬆貨比五百家，一站比價三千萬筆商品，再享LINE POINTS回饋賺不停！
+                </div>
+                <a class="siteLink" href="#" style="color: #1e1e1e; text-decoration: none;">
+                    <div class=siteIcon>
+                        <img src="image/linkIcon.png">
+                    </div>
+                    <div class="siteIconText">其他詳細資訊</div>
+                </a>
+            </div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src = "image/image5.png">
+            </div>
+            <div class="text">
+                <img class="imgIcon" src="image/icon5.png">
+                <h4 class="title1">LINE TV</h4>
+                <h5 class="title2">共享追劇生活</h5>
+                <div class="description">
+                    和朋友一起追劇，不錯過最新、最熱門、最潮的話題大劇，即時分享娛樂影音，展開精彩生活故事，LINE TV是您的追劇第一選擇！
+                </div>
+                <a class="siteLink" href="#" style="color: #1e1e1e; text-decoration: none;">
+                    <div class=siteIcon>
+                        <img src="image/linkIcon.png">
+                    </div>
+                    <div class="siteIconText">其他詳細資訊</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
