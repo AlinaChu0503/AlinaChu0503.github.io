@@ -43,6 +43,7 @@
         //遊戲開始，產生隨機數字
         let generateNumber = document.querySelector('.generate-number')
         generateNumber.onclick = function(){
+            generateNumber.disabled = true;
             answer = getRandom(100);
             console.log(answer);
         };
@@ -67,7 +68,7 @@
                 return;
             }
 
-            const numRegexp = /^\d{4}/;
+            const numRegexp = /^\d{0,3}/;
             if (!numRegexp.test(inputNumber)){
                 alert('Please input a number.');
                 return;
@@ -80,12 +81,18 @@
             }
 
             // 答案結果比對與更新範圍
+            let txtbox = document.querySelector('p');
             if (inputNumber == answer){
                 alert('You made it!');
+                generateNumber.disabled = false;
+
+                minValue = 0;
+                maxValue = 100; 
+                txtbox.innerText = minValue + '~' + maxValue;
+
                 return;
             }
             else{
-                let txtbox = document.querySelector('p');
                 if (inputNumber < answer){
                     txtbox.innerText = inputNumber + '~' + maxValue;
                     minValue = inputNumber;
