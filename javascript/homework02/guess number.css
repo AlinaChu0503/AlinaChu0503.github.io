@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: auto;
+    /* text-align: center;   */
+    /* align-items: center; */
+    
+}
+.container h1{
+    font-size: 40px;
+    margin: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.container p{
+    margin: auto;
+    border: 1px solid;
+    padding: 25px 100px;
+    width: 150px;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.generate-number{
+    font-size: 24px;
+    padding: 10px 50px;
+    display: block;
+    margin: 20px auto;
+}
+
+.guess-number{
+    text-align: center;
+    margin: 15px;
+}
+
+.guess-number input{
+    width: 200px;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 15px;
+}
+
+/* .btn-group{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+} */
+
+.btn-group{
+    margin:auto;
+    width: 300px;
+    justify-content: center;
+}
+
+.number{
+    width: 80px;
+    font-size: 25px;
+    padding: 25px 2px;
+    margin: 5px 5px;
+    color: white;
+    background-color: rgb(102, 27, 172);
+}
+.clear{
+    width: 80px;
+    font-size: 25px;
+    padding: 25px 2px;
+    margin: 5px 5px;
+    color:red;
+}
+.enter{
+    width: 80px;
+    font-size: 25px;
+    padding: 25px 2px;
+    margin: 5px 5px;
+    color:green;
+}

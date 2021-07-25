@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終極密碼</title>
+    <link rel ="stylesheet" type="text/css" href="guess number.css">
+</head>
+<body>
+    <div class="container">
+        <div class="number-display"></div>
+        <h1>終極密碼</h1>
+        <p>0~100</p>
+        </div>
+        <button class="generate-number">產生數字</button>
+        <div class="guess-number">
+            <input type="text">
+        </div>
+        <div class="btn-group">
+            <button class="number btn1">1</button>
+            <button class="number btn2">2</button>
+            <button class="number btn3">3</button>
+            <button class="number btn4">4</button>
+            <button class="number btn5">5</button>
+            <button class="number btn6">6</button>
+            <button class="number btn7">7</button>
+            <button class="number btn8">8</button>
+            <button class="number btn9">9</button>
+            <button class="clear">X</button>
+            <button class="number btn0">0</button>
+            <button class="enter">V</button>
+        </div>
+    </div>
+        
+
+
+
+    <script>
+        let maxValue = 100, minValue = 0;
+        let inputNumber, answer;
+
+        //遊戲開始，產生隨機數字
+        let generateNumber = document.querySelector('.generate-number')
+        generateNumber.onclick = function(){
+            answer = getRandom(100);
+            console.log(answer);
+        };
+
+
+        function getRandom(x){
+            return Math.floor(Math.random()*x);
+        }
+
+        
+        //輸入數字
+        let enterBtn = document.querySelector('.enter')
+        enterBtn.onclick = function(){
+            inputNumber = document.querySelector('input').value
+            document.querySelector('input').value = '';
+            checkNumber();
+        }
+
+        function checkNumber(){
+            if (inputNumber == ''){
+                alert('Please enter a number.');
+                return;
+            }
+
+            const numRegexp = /^\d{4}/;
+            if (!numRegexp.test(inputNumber)){
+                alert('Please input a number.');
+                return;
+            }
+
+            // 檢查輸入是否在範圍內
+            if (inputNumber < minValue || inputNumber > maxValue){
+                alert('The number is not in range.');
+                return;
+            }
+
+            // 答案結果比對與更新範圍
+            if (inputNumber == answer){
+                alert('You made it!');
+                return;
+            }
+            else{
+                let txtbox = document.querySelector('p');
+                if (inputNumber < answer){
+                    txtbox.innerText = inputNumber + '~' + maxValue;
+                    minValue = inputNumber;
+                }
+                else{
+                    txtbox.innerText = minValue + '~' + inputNumber;
+                    maxValue = inputNumber;
+                }
+            }
+
+        }
+        
+        // clear button
+        let clearBtn = document.querySelector('.clear')
+        clearBtn.onclick = function(){
+            document.querySelector('input').value = '';
+        }
+
+        // let numberBtn = document.querySelectorAll('.number');
+        // numberBtn.forEach((btn, index) => {
+        //     numberBtn[index].addEventListener('click', function() {
+        //         console.log(index);
+        //     });
+        // });
+    
+        // 數字0~9按鈕
+        let btn1 = document.querySelector('.btn1');
+        btn1.addEventListener('click', function () {
+            document.querySelector('input').value += '1';
+        });
+
+        let btn2 = document.querySelector('.btn2');
+        btn2.addEventListener('click', function () {
+            document.querySelector('input').value += '2';
+        });
+
+        let btn3 = document.querySelector('.btn3');
+        btn3.addEventListener('click', function () {
+            document.querySelector('input').value += '3';
+        });
+
+        let btn4 = document.querySelector('.btn4');
+        btn4.addEventListener('click', function () {
+            document.querySelector('input').value += '4';
+        });
+
+        let btn5 = document.querySelector('.btn5');
+        btn5.addEventListener('click', function () {
+            document.querySelector('input').value += '5';
+        });
+
+        let btn6 = document.querySelector('.btn6');
+        btn6.addEventListener('click', function () {
+            document.querySelector('input').value += '6';
+        });
+
+        let btn7 = document.querySelector('.btn7');
+        btn7.addEventListener('click', function () {
+            document.querySelector('input').value += '7';
+        });
+
+        let btn8 = document.querySelector('.btn8');
+        btn8.addEventListener('click', function () {
+            document.querySelector('input').value += '8';
+        });
+
+        let btn9 = document.querySelector('.btn9');
+        btn9.addEventListener('click', function () {
+            document.querySelector('input').value += '9';
+        });
+
+        let btn0 = document.querySelector('.btn0');
+        btn0.addEventListener('click', function () {
+            document.querySelector('input').value += '0';
+        });
+
+        
+        
+
+    </script>
+</body>
+</html>
