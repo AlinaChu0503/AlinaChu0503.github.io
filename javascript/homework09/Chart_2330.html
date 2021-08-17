@@ -18,7 +18,7 @@
         <canvas id="myChart"></canvas>
     </div>
     <script>
-        const url2330="https://raw.githubusercontent.com/AlinaChu0503/AlinaChu0503.github.io/master/javascript/homework09.html/2330.json";
+        const url2330="https://raw.githubusercontent.com/AlinaChu0503/AlinaChu0503.github.io/master/javascript/homework09/2330.json";
         var ctx, chart, array2330;
 
         var ctx, chart;
@@ -96,7 +96,7 @@
                 const xhr = new XMLHttpRequest();
                 xhr.onload = () => resolve(xhr.responseText);
                 xhr.onerror = () => reject(xhr.status);
-                xhr.open("GET", url);
+                xhr.open('GET', url);
                 xhr.send();
             });
 
@@ -109,7 +109,7 @@
         }
 
         //同步
-        async function asyncFetchJson(url){
+        async function asyncFetchJSON(url){
             let reponse = await fetch(url);
             let result = await response.text();
             return result;
